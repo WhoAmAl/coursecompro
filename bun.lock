@@ -11,6 +11,7 @@
         "embla-carousel": "^8.6.0",
         "embla-carousel-auto-scroll": "^8.6.0",
         "embla-carousel-svelte": "^8.6.0",
+        "estree-walker": "^3.0.3",
         "lucide": "^1.7.0",
       },
       "devDependencies": {
