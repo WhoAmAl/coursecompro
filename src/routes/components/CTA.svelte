@@ -1,5 +1,4 @@
 <section class="relative overflow-hidden px-6 py-24 md:px-8">
-	<!-- Background Gradient Soft -->
 	<div class="absolute inset-0 bg-gradient-to-r from-red-500 to-rose-400"></div>
 
 	<!-- Glow Effect -->

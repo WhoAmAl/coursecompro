@@ -5,10 +5,12 @@
 	import Herosection from './components/Herosection.svelte';
 	import Mentors from './components/Mentors.svelte';
 	import Testimonials from './components/Testimonials.svelte';
+	import USP from './components/USP.svelte';
 </script>
 
 <main class="font-sans text-gray-800">
 	<Herosection />
+	<USP />
 	<ClassMenu />
 	<Mentors />
 	<Testimonials />
