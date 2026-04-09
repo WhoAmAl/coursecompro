@@ -3,9 +3,10 @@ import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vitest/config';
 import { playwright } from '@vitest/browser-playwright';
 import { sveltekit } from '@sveltejs/kit/vite';
+import svg from 'vite-plugin-svelte-svg';
 
 export default defineConfig({
-	plugins: [tailwindcss(), sveltekit(), devtoolsJson()],
+	plugins: [tailwindcss(), sveltekit(), svg(), devtoolsJson()],
 	test: {
 		expect: { requireAssertions: true },
 		projects: [
