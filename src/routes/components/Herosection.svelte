@@ -16,7 +16,7 @@
 		<div>
 			<h1 class="mb-6 text-4xl leading-tight font-extrabold md:text-6xl">
 				Belajar Mandarin <br />
-				<span class="bg-gradient-to-r from-red-600 to-rose-400 bg-clip-text text-transparent">
+				<span class="bg-linear-to-r from-red-600 to-rose-400 bg-clip-text text-transparent">
 					Tanpa Ribet, Tanpa Takut
 				</span>
 			</h1>
@@ -51,16 +51,18 @@
 		</div>
 
 		<div class="relative">
-			<div class="relative z-10 rounded-3xl bg-white p-6 shadow-xl">
-				<div
-					class="flex h-56 items-center justify-center rounded-2xl bg-gradient-to-br from-red-500 to-rose-400 text-xl font-bold text-white"
-				>
-					Interactive Class Preview
-				</div>
+			<div
+				class="relative z-10 overflow-hidden rounded-3xl border border-neutral-100 bg-white p-6 shadow-xl"
+			>
+				<img
+					src="https://i.pinimg.com/1200x/54/8f/60/548f6073ddd426818a06ce5c50e8e5e4.jpg"
+					alt=""
+					class="h-56 w-full rounded-2xl object-cover"
+				/>
 			</div>
 
 			<div class="absolute -top-6 -right-6 z-10 rounded-xl bg-white px-4 py-2 text-sm shadow-lg">
-				🎯 HSK Ready
+				🎯 HSK Preparation
 			</div>
 
 			<div class="absolute -bottom-10 -left-6 rounded-xl bg-white px-4 py-2 text-sm shadow-md">
