@@ -65,7 +65,7 @@
 						? 'bg-gradient-to-br from-red-500 to-rose-400 p-[2px]'
 						: 'border border-gray-200'}"
 				>
-					<div class="flex h-full flex-col rounded-[22px] bg-white p-8">
+					<div class="flex h-full flex-col rounded-3xl bg-white p-8">
 						{#if item.isPopular}
 							<div
 								class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-red-600 px-4 py-1 text-xs text-white shadow"
