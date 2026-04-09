@@ -97,6 +97,7 @@
 	>
 		{#each navItems as item}
 			<button
+				on:click={() => navigateTo(item.url)}
 				class="flex flex-col items-center text-xs text-gray-500 transition hover:text-red-600"
 			>
 				{#if typeof item.icon === 'string'}

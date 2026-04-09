@@ -1,4 +1,4 @@
-<footer class="mt-auto border-t border-gray-200 bg-white px-6 py-9 md:px-8">
+<footer id="footer" class="mt-auto border-t border-gray-200 bg-white px-6 py-9 md:px-8">
 	<div class="mx-auto grid max-w-6xl gap-10 md:grid-cols-4">
 		<div>
 			<h2
