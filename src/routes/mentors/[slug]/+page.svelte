@@ -6,7 +6,7 @@
 
 <section
 	id="specified-mentor"
-	class="to-r-500 bg-linear-to-r from-red-500 to-rose-500 px-6 py-20 md:px-8"
+	class="to-r-500 bg-linear-to-r from-red-500 to-rose-500 px-6 py-5 sm:py-10 md:px-8 md:py-20"
 >
 	<div class="mx-auto max-w-6xl">
 		<div class="grid items-center gap-12 md:grid-cols-2">
@@ -31,7 +31,7 @@
 					<p class="mt-2 text-2xl text-neutral-100">
 						{data.mentor.role}
 					</p>
-					<p class="mt-6 text-lg leading-relaxed text-neutral-100">
+					<p class="mt-6 text-sm leading-relaxed text-neutral-100 md:text-lg">
 						Membantu siswa mencapai kemampuan Mandarin secara natural, terstruktur, dan percaya diri
 						melalui pendekatan praktis.
 					</p>

@@ -1,7 +1,10 @@
-<script>
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import { page } from '$app/state';
+	import { goto, afterNavigate } from '$app/navigation';
 	import { mentors } from '$lib/data/mentors';
-	import emblaCarouselSvelte from 'embla-carousel-svelte';
 	import AutoScroll from 'embla-carousel-auto-scroll';
+	import emblaCarouselSvelte from 'embla-carousel-svelte';
 
 	const options = {
 		loop: true
@@ -14,6 +17,53 @@
 			stopOnMouseEnter: true
 		})
 	];
+
+	document.body.classList.add('opacity-0');
+	setTimeout(() => {
+		scrollToTopSection();
+		document.body.classList.remove('opacity-0');
+	}, 150);
+
+	let pendingScrollTop = false;
+
+	function scrollToTopSection() {
+		const el = document.getElementById('specified-mentor');
+		if (!el) return;
+
+		const yOffset = -80;
+		const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+
+		window.scrollTo({
+			top: y,
+			behavior: 'smooth'
+		});
+	}
+
+	function navigateToMentor(slug: string) {
+		const targetUrl = `/mentors/${slug}`;
+
+		pendingScrollTop = true;
+
+		goto(targetUrl, {
+			noScroll: true,
+			keepFocus: true
+		});
+	}
+
+	onMount(() => {
+		const unsubscribe = afterNavigate(() => {
+			if (pendingScrollTop) {
+				pendingScrollTop = false;
+
+				// delay kecil
+				setTimeout(() => {
+					scrollToTopSection();
+				}, 150);
+			}
+		});
+
+		return unsubscribe;
+	});
 </script>
 
 <div class="mt-8 w-full overflow-hidden" use:emblaCarouselSvelte={{ options, plugins }}>
@@ -53,12 +103,12 @@
 						<p class="text-xs text-gray-400">Rating</p>
 					</div>
 				</div>
-				<a
-						href={`/mentors/${m.slug}`}
-						class="mt-4 w-full rounded-xl bg-red-50 py-2 text-center text-sm font-semibold text-red-600 transition hover:bg-red-100"
-					>
-						Lihat Profil
-					</a>
+				<button
+					on:click={() => navigateToMentor(m.slug)}
+					class="mt-4 w-full rounded-xl bg-red-50 py-2 text-center text-sm font-semibold text-red-600 transition hover:bg-red-100"
+				>
+					Lihat Profil
+				</button>
 			</div>
 		{/each}
 	</div>
