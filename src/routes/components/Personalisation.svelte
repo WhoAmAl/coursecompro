@@ -8,17 +8,17 @@
 			title: 'Persiapan Kuliah ke China',
 			desc: 'Kamu akan butuh sertifikasi HSK 4 untuk apply di kebanyakan kampus di Tiongkok, kami akan bantu kamu melakukan persiapan untuk mengambil sertifikasi HSK 4 dan mengatarkan kamu ke Universitas terkenal di Tiongkok.',
 			recommendation: 'Target HSK 4',
-			duration: '± 6 – 10 bulan',
-			price: 'Rp 5.000.000 – 8.000.000',
+			duration: '± 6 - 10 bulan',
+			price: 'Rp 600.000 - 8.000.000',
 			label: 'Kuliah ke China',
 			sub: 'Target HSK 4+'
 		},
 		conversation: {
 			title: 'Fokus Percakapan',
 			desc: 'Kamu akan dilatih untuk bisa lebih fasih berbicara bahasa Mandarin untuk kebutuhan daily speaking maupun professional communication dalam pekerjaan.',
-			recommendation: 'Conversation Class + HSK 2–3',
-			duration: '± 3 – 5 bulan',
-			price: 'Rp 2.000.000 – 3.500.000',
+			recommendation: 'Conversation Class + HSK 2-3',
+			duration: '± 3 - 5 bulan',
+			price: 'Rp 2.000.000 - 3.500.000',
 			label: 'Daily Conversation',
 			sub: 'Ngobrol lancar'
 		}
