@@ -30,7 +30,7 @@
 	const sidePerta = testimonials.filter((t) => !t.prestigious);
 </script>
 
-<section class="overflow-hidden bg-white px-4 py-24">
+<section id="testimonials" class="overflow-hidden bg-white px-4 py-24">
 	<div class="mx-auto max-w-6xl">
 		<div class="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end">
 			<div class="max-w-xl">

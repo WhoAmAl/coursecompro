@@ -1,4 +1,4 @@
-<section class="relative overflow-hidden bg-white px-6 py-24 md:px-12">
+<section id="home" class="relative overflow-hidden bg-white px-6 py-24 md:px-12">
 	<div
 		class="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-red-200 opacity-30 blur-3xl"
 	></div>
