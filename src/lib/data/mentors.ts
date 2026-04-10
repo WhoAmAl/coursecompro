@@ -6,6 +6,7 @@ export type Mentor = {
 	students: string;
 	rating: string;
 	desc: string;
+	pict: string;
 };
 
 export const mentors: Mentor[] = [
@@ -16,7 +17,8 @@ export const mentors: Mentor[] = [
 		exp: '8+ Tahun Mengajar',
 		students: '500+ Siswa',
 		rating: '4.9',
-		desc: 'Spesialis membantu siswa berbicara natural seperti penutur asli.'
+		desc: 'Spesialis membantu siswa berbicara natural seperti penutur asli.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Chen Yu',
@@ -25,7 +27,8 @@ export const mentors: Mentor[] = [
 		exp: '6+ Tahun Pengalaman',
 		students: '300+ Siswa',
 		rating: '4.8',
-		desc: 'Fokus pada strategi cepat dan efektif untuk lulus HSK.'
+		desc: 'Fokus pada strategi cepat dan efektif untuk lulus HSK.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Andi',
@@ -34,7 +37,8 @@ export const mentors: Mentor[] = [
 		exp: '5+ Tahun Mengajar',
 		students: '400+ Siswa',
 		rating: '4.9',
-		desc: 'Pendekatan santai dan mudah dipahami untuk pemula.'
+		desc: 'Pendekatan santai dan mudah dipahami untuk pemula.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Zhang Min',
@@ -43,7 +47,8 @@ export const mentors: Mentor[] = [
 		exp: '7+ Tahun Mengajar',
 		students: '450+ Siswa',
 		rating: '4.8',
-		desc: 'Fokus meningkatkan kepercayaan diri dalam percakapan sehari-hari.'
+		desc: 'Fokus meningkatkan kepercayaan diri dalam percakapan sehari-hari.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Liu Fang',
@@ -52,7 +57,8 @@ export const mentors: Mentor[] = [
 		exp: '9+ Tahun Pengalaman',
 		students: '600+ Siswa',
 		rating: '4.9',
-		desc: 'Ahli dalam menjelaskan grammar dengan cara sederhana.'
+		desc: 'Ahli dalam menjelaskan grammar dengan cara sederhana.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Wang Lei',
@@ -61,7 +67,8 @@ export const mentors: Mentor[] = [
 		exp: '10+ Tahun Mengajar',
 		students: '700+ Siswa',
 		rating: '5.0',
-		desc: 'Spesialis bahasa Mandarin untuk kebutuhan profesional.'
+		desc: 'Spesialis bahasa Mandarin untuk kebutuhan profesional.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Dewi',
@@ -70,7 +77,8 @@ export const mentors: Mentor[] = [
 		exp: '4+ Tahun Mengajar',
 		students: '350+ Siswa',
 		rating: '4.7',
-		desc: 'Cocok untuk kamu yang baru mulai belajar dari nol.'
+		desc: 'Cocok untuk kamu yang baru mulai belajar dari nol.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Huang Jie',
@@ -79,7 +87,8 @@ export const mentors: Mentor[] = [
 		exp: '6+ Tahun Pengalaman',
 		students: '420+ Siswa',
 		rating: '4.8',
-		desc: 'Fokus pada pelafalan dan tone Mandarin yang tepat.'
+		desc: 'Fokus pada pelafalan dan tone Mandarin yang tepat.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Rina',
@@ -88,7 +97,8 @@ export const mentors: Mentor[] = [
 		exp: '5+ Tahun Mengajar',
 		students: '380+ Siswa',
 		rating: '4.9',
-		desc: 'Belajar Mandarin praktis untuk kehidupan sehari-hari.'
+		desc: 'Belajar Mandarin praktis untuk kehidupan sehari-hari.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Sun Hao',
@@ -97,7 +107,8 @@ export const mentors: Mentor[] = [
 		exp: '8+ Tahun Pengalaman',
 		students: '550+ Siswa',
 		rating: '4.9',
-		desc: 'Membantu siswa mencapai level HSK tinggi dengan cepat.'
+		desc: 'Membantu siswa mencapai level HSK tinggi dengan cepat.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Mei Lin',
@@ -106,7 +117,8 @@ export const mentors: Mentor[] = [
 		exp: '7+ Tahun Mengajar',
 		students: '300+ Siswa',
 		rating: '4.8',
-		desc: 'Pendekatan fun dan interaktif untuk anak-anak.'
+		desc: 'Pendekatan fun dan interaktif untuk anak-anak.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Budi',
@@ -115,7 +127,8 @@ export const mentors: Mentor[] = [
 		exp: '6+ Tahun Pengalaman',
 		students: '410+ Siswa',
 		rating: '4.7',
-		desc: 'Latihan intensif untuk meningkatkan skill berbicara.'
+		desc: 'Latihan intensif untuk meningkatkan skill berbicara.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Zhao Yun',
@@ -124,7 +137,8 @@ export const mentors: Mentor[] = [
 		exp: '9+ Tahun Mengajar',
 		students: '620+ Siswa',
 		rating: '4.9',
-		desc: 'Program belajar cepat dengan hasil maksimal.'
+		desc: 'Program belajar cepat dengan hasil maksimal.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Siti',
@@ -133,7 +147,8 @@ export const mentors: Mentor[] = [
 		exp: '4+ Tahun Pengalaman',
 		students: '290+ Siswa',
 		rating: '4.8',
-		desc: 'Gaya mengajar santai dan mudah dipahami.'
+		desc: 'Gaya mengajar santai dan mudah dipahami.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Guo Ming',
@@ -142,7 +157,8 @@ export const mentors: Mentor[] = [
 		exp: '7+ Tahun Mengajar',
 		students: '500+ Siswa',
 		rating: '4.9',
-		desc: 'Melatih kemampuan listening hingga level native.'
+		desc: 'Melatih kemampuan listening hingga level native.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Kevin',
@@ -151,7 +167,8 @@ export const mentors: Mentor[] = [
 		exp: '5+ Tahun Pengalaman',
 		students: '360+ Siswa',
 		rating: '4.7',
-		desc: 'Strategi jitu menghadapi ujian Mandarin.'
+		desc: 'Strategi jitu menghadapi ujian Mandarin.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Tang Wei',
@@ -160,7 +177,8 @@ export const mentors: Mentor[] = [
 		exp: '8+ Tahun Mengajar',
 		students: '540+ Siswa',
 		rating: '4.9',
-		desc: 'Membantu siswa berbicara lebih lancar dan natural.'
+		desc: 'Membantu siswa berbicara lebih lancar dan natural.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Nina',
@@ -169,7 +187,8 @@ export const mentors: Mentor[] = [
 		exp: '3+ Tahun Pengalaman',
 		students: '250+ Siswa',
 		rating: '4.7',
-		desc: 'Mentor ramah untuk pemula tanpa pengalaman.'
+		desc: 'Mentor ramah untuk pemula tanpa pengalaman.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Lin Tao',
@@ -178,7 +197,8 @@ export const mentors: Mentor[] = [
 		exp: '6+ Tahun Mengajar',
 		students: '430+ Siswa',
 		rating: '4.8',
-		desc: 'Fokus pada aksen dan intonasi yang tepat.'
+		desc: 'Fokus pada aksen dan intonasi yang tepat.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Agus',
@@ -187,7 +207,8 @@ export const mentors: Mentor[] = [
 		exp: '4+ Tahun Pengalaman',
 		students: '300+ Siswa',
 		rating: '4.6',
-		desc: 'Belajar santai tanpa tekanan tapi tetap efektif.'
+		desc: 'Belajar santai tanpa tekanan tapi tetap efektif.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Zhou Li',
@@ -196,7 +217,8 @@ export const mentors: Mentor[] = [
 		exp: '9+ Tahun Mengajar',
 		students: '600+ Siswa',
 		rating: '4.9',
-		desc: 'Ahli dalam penulisan karakter Mandarin.'
+		desc: 'Ahli dalam penulisan karakter Mandarin.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Clara',
@@ -205,7 +227,8 @@ export const mentors: Mentor[] = [
 		exp: '5+ Tahun Pengalaman',
 		students: '370+ Siswa',
 		rating: '4.8',
-		desc: 'Partner latihan speaking yang interaktif.'
+		desc: 'Partner latihan speaking yang interaktif.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Chen Hao',
@@ -214,7 +237,8 @@ export const mentors: Mentor[] = [
 		exp: '10+ Tahun Mengajar',
 		students: '750+ Siswa',
 		rating: '5.0',
-		desc: 'Mentor untuk level advanced dan profesional.'
+		desc: 'Mentor untuk level advanced dan profesional.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Yuni',
@@ -223,7 +247,8 @@ export const mentors: Mentor[] = [
 		exp: '4+ Tahun Pengalaman',
 		students: '310+ Siswa',
 		rating: '4.7',
-		desc: 'Membantu siswa tetap konsisten belajar.'
+		desc: 'Membantu siswa tetap konsisten belajar.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Feng Li',
@@ -232,7 +257,8 @@ export const mentors: Mentor[] = [
 		exp: '7+ Tahun Mengajar',
 		students: '520+ Siswa',
 		rating: '4.9',
-		desc: 'Fokus memperkaya kosakata secara cepat.'
+		desc: 'Fokus memperkaya kosakata secara cepat.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Dian',
@@ -241,7 +267,8 @@ export const mentors: Mentor[] = [
 		exp: '5+ Tahun Pengalaman',
 		students: '400+ Siswa',
 		rating: '4.8',
-		desc: 'Metode belajar interaktif dan tidak membosankan.'
+		desc: 'Metode belajar interaktif dan tidak membosankan.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Xu Jian',
@@ -250,7 +277,8 @@ export const mentors: Mentor[] = [
 		exp: '11+ Tahun Mengajar',
 		students: '800+ Siswa',
 		rating: '5.0',
-		desc: 'Pengalaman luas dalam mengajar berbagai level.'
+		desc: 'Pengalaman luas dalam mengajar berbagai level.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	},
 	{
 		name: 'Aulia',
@@ -259,6 +287,7 @@ export const mentors: Mentor[] = [
 		exp: '3+ Tahun Pengalaman',
 		students: '280+ Siswa',
 		rating: '4.6',
-		desc: 'Jadwal fleksibel dan metode adaptif sesuai siswa.'
+		desc: 'Jadwal fleksibel dan metode adaptif sesuai siswa.',
+		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
 	}
 ];

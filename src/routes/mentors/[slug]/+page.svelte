@@ -15,13 +15,11 @@
 					class="absolute top-0 left-0 h-full w-[3px] bg-gradient-to-b from-red-500 to-rose-400"
 				></div>
 				<div class="mt-10 pl-6">
-					<div class="aspect-[4.5/5] w-30 overflow-hidden rounded-lg bg-gray-200 shadow-xl">
-						<img
-							src="https://i.pinimg.com/736x/84/8c/79/848c794a11af6d49b9d1f06e18624650.jpg"
-							alt=""
-							class="h-auto w-full object-cover"
-						/>
-					</div>
+					<img
+						src={data.mentor.pict}
+						alt=""
+						class="aspect-[4.5/5] h-auto w-30 rounded-lg object-cover"
+					/>
 				</div>
 
 				<div class="pl-6">

@@ -54,7 +54,7 @@
 		{ label: 'Home', icon: House, url: '/#home' },
 		{ label: 'Mentor', icon: GraduationCap, url: '/mentors' },
 		{ label: 'Testimoni', icon: MessageCircle, url: '/#testimonials' },
-		{ label: 'Contact', icon: Phone, url: '/' }
+		{ label: 'Contact', icon: Phone, url: '/contactus' }
 	];
 </script>
 

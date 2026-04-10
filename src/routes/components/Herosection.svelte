@@ -6,11 +6,11 @@
 		class="absolute top-20 right-0 h-[400px] w-[400px] rounded-full bg-rose-300 opacity-20 blur-3xl"
 	></div>
 
-	<div class="absolute top-20 left-10 hidden animate-pulse md:block">
+	<!-- <div class="absolute top-20 left-10 hidden animate-pulse md:block">
 		<div class="rounded-full bg-white px-4 py-2 text-sm shadow-md">
 			🇨🇳 #1 Mandarin Class for Beginners
 		</div>
-	</div>
+	</div> -->
 
 	<div class="relative z-10 mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
 		<div>
