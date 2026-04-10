@@ -3,110 +3,142 @@
 		label: string;
 		price: number;
 		meetings: string;
+		duration: number;
 	};
 
 	type ClassType = 'private' | 'semi' | 'group';
-	type Pricing = Record<number, Record<ClassType, Plan[]>>;
+	type Level = 1 | 2 | 3 | 4 | 5;
 
-	const classTypes = ['private', 'semi', 'group'] as const;
+	type Pricing = Record<Level, Record<ClassType, Plan[]>>;
 
-	let start = $state(1);
-	let end = $state(2);
-	let type = $state<(typeof classTypes)[number]>('semi');
+	const classTypes: ClassType[] = ['private', 'semi', 'group'];
+	const levels: Level[] = [1, 2, 3, 4, 5];
+
+	let start = $state<Level>(1);
+	let end = $state<Level>(2);
+	let type = $state<ClassType>('semi');
 	let selectedPlan = $state(0);
 
 	const pricing: Pricing = {
 		1: {
 			private: [
-				{ label: '8x', price: 1300000, meetings: '8x / bulan' },
-				{ label: '12x', price: 1800000, meetings: '12x / bulan' }
+				{ label: 'Reguler', price: 1300000, meetings: '8x / bulan', duration: 3 },
+				{ label: 'Intensif', price: 1800000, meetings: '12x / bulan', duration: 2 }
 			],
 			semi: [
-				{ label: '8x (2 org)', price: 750000, meetings: '8x / bulan' },
-				{ label: '12x (2 org)', price: 1000000, meetings: '12x / bulan' }
+				{ label: 'Reguler', price: 750000, meetings: '8x / bulan', duration: 3 },
+				{ label: 'Intensif', price: 1000000, meetings: '12x / bulan', duration: 2 }
 			],
 			group: [
-				{ label: '8x', price: 385000, meetings: '8x / bulan' },
-				{ label: '12x', price: 480000, meetings: '12x / bulan' }
+				{ label: 'Reguler', price: 385000, meetings: '8x / bulan', duration: 3 },
+				{ label: 'Intensif', price: 480000, meetings: '12x / bulan', duration: 2 }
 			]
 		},
 
 		2: {
 			private: [
-				{ label: '8x', price: 1400000, meetings: '8x / bulan' },
-				{ label: '12x', price: 1900000, meetings: '12x / bulan' }
+				{ label: 'Reguler', price: 1400000, meetings: '8x / bulan', duration: 3 },
+				{ label: 'Intensif', price: 1900000, meetings: '12x / bulan', duration: 2 }
 			],
 			semi: [
-				{ label: '8x (2 org)', price: 850000, meetings: '8x / bulan' },
-				{ label: '12x (2 org)', price: 1100000, meetings: '12x / bulan' }
+				{ label: 'Reguler', price: 850000, meetings: '8x / bulan', duration: 3 },
+				{ label: 'Intensif', price: 1100000, meetings: '12x / bulan', duration: 2 }
 			],
 			group: [
-				{ label: '8x', price: 435000, meetings: '8x / bulan' },
-				{ label: '12x', price: 550000, meetings: '12x / bulan' }
+				{ label: 'Reguler', price: 435000, meetings: '8x / bulan', duration: 3 },
+				{ label: 'Intensif', price: 550000, meetings: '12x / bulan', duration: 2 }
 			]
 		},
 
 		3: {
 			private: [
-				{ label: '8x', price: 1500000, meetings: '8x / bulan' },
-				{ label: '12x', price: 2100000, meetings: '12x / bulan' }
+				{ label: 'Reguler', price: 1500000, meetings: '8x / bulan', duration: 3 },
+				{ label: 'Intensif', price: 2100000, meetings: '12x / bulan', duration: 2 }
 			],
 			semi: [
-				{ label: '8x (2 org)', price: 950000, meetings: '8x / bulan' },
-				{ label: '12x (2 org)', price: 1200000, meetings: '12x / bulan' }
+				{ label: 'Reguler', price: 950000, meetings: '8x / bulan', duration: 3 },
+				{ label: 'Intensif', price: 1200000, meetings: '12x / bulan', duration: 2 }
 			],
 			group: [
-				{ label: '8x', price: 500000, meetings: '8x / bulan' },
-				{ label: '12x', price: 650000, meetings: '12x / bulan' }
+				{ label: 'Reguler', price: 500000, meetings: '8x / bulan', duration: 3 },
+				{ label: 'Intensif', price: 650000, meetings: '12x / bulan', duration: 2 }
 			]
 		},
 
 		4: {
 			private: [
-				{ label: '8x', price: 1700000, meetings: '8x / bulan' },
-				{ label: '12x', price: 2300000, meetings: '12x / bulan' }
+				{ label: 'Reguler', price: 1700000, meetings: '8x / bulan', duration: 3 },
+				{ label: 'Intensif', price: 2300000, meetings: '12x / bulan', duration: 2 }
 			],
 			semi: [
-				{ label: '8x (2 org)', price: 1050000, meetings: '8x / bulan' },
-				{ label: '12x (2 org)', price: 1350000, meetings: '12x / bulan' }
+				{ label: 'Reguler', price: 1050000, meetings: '8x / bulan', duration: 3 },
+				{ label: 'Intensif', price: 1350000, meetings: '12x / bulan', duration: 2 }
 			],
 			group: [
-				{ label: '8x', price: 600000, meetings: '8x / bulan' },
-				{ label: '12x', price: 750000, meetings: '12x / bulan' }
+				{ label: 'Reguler', price: 600000, meetings: '8x / bulan', duration: 3 },
+				{ label: 'Intensif', price: 750000, meetings: '12x / bulan', duration: 2 }
 			]
 		},
 
 		5: {
 			private: [
-				{ label: '8x', price: 1900000, meetings: '8x / bulan' },
-				{ label: '12x', price: 2600000, meetings: '12x / bulan' }
+				{ label: 'Reguler', price: 1900000, meetings: '8x / bulan', duration: 3 },
+				{ label: 'Intensif', price: 2600000, meetings: '12x / bulan', duration: 2 }
 			],
 			semi: [
-				{ label: '8x (2 org)', price: 1200000, meetings: '8x / bulan' },
-				{ label: '12x (2 org)', price: 1500000, meetings: '12x / bulan' }
+				{ label: 'Reguler', price: 1200000, meetings: '8x / bulan', duration: 3 },
+				{ label: 'Intensif', price: 1500000, meetings: '12x / bulan', duration: 2 }
 			],
 			group: [
-				{ label: '8x', price: 700000, meetings: '8x / bulan' },
-				{ label: '12x', price: 900000, meetings: '12x / bulan' }
+				{ label: 'Reguler', price: 700000, meetings: '8x / bulan', duration: 3 },
+				{ label: 'Intensif', price: 900000, meetings: '12x / bulan', duration: 2 }
 			]
 		}
 	};
 
-	function getLevels() {
-		return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+	function getLevels(): Level[] {
+		return levels.filter((l) => l >= start && l <= end);
 	}
 
-	function total() {
+	function total(): number {
 		let sum = 0;
+
 		for (const lvl of getLevels()) {
 			const plan = pricing[lvl]?.[type]?.[selectedPlan];
-			if (plan) sum += plan.price;
+			if (plan) {
+				sum += plan.price * plan.duration;
+			}
 		}
+
 		return sum;
 	}
 
-	function format(n: number) {
+	function format(n: number): string {
 		return 'Rp ' + n.toLocaleString('id-ID');
+	}
+
+	$effect(() => {
+		if (start > end) {
+			end = start;
+		}
+	});
+
+	function priceRangeByIndex(index: number) {
+		let prices: number[] = [];
+
+		for (const lvl of getLevels()) {
+			const plan = pricing[lvl]?.[type]?.[index];
+			if (plan) {
+				prices.push(plan.price);
+			}
+		}
+
+		if (prices.length === 0) return null;
+
+		return {
+			min: Math.min(...prices),
+			max: Math.max(...prices)
+		};
 	}
 </script>
 
@@ -155,6 +187,13 @@
 							<p class="font-semibold capitalize">
 								{t === 'semi' ? 'Semi Private' : t}
 							</p>
+							{#if t === 'private'}
+								<p class="text-sm text-neutral-400 capitalize">1 Orang</p>
+							{:else if t === 'semi'}
+								<p class="text-sm text-neutral-400 capitalize">2-3 Orang</p>
+							{:else}
+								<p class="text-sm text-neutral-400 capitalize">5-8 Orang</p>
+							{/if}
 						</button>
 					{/each}
 				</div>
@@ -162,18 +201,25 @@
 				<!-- PLAN -->
 				<div class="grid gap-3">
 					{#each pricing[start][type] as plan, i}
+						{@const range = priceRangeByIndex(i)}
+
 						<button
 							on:click={() => (selectedPlan = i)}
 							class={`flex items-center justify-between rounded-xl border p-4 transition-all
-							${selectedPlan === i ? 'border-red-500 bg-red-50' : 'border-gray-200 hover:border-red-300'}`}
+			${selectedPlan === i ? 'border-red-500 bg-red-50' : 'border-gray-200 hover:border-red-300'}`}
 						>
 							<div>
 								<p class="font-semibold">{plan.label}</p>
 								<p class="text-xs text-gray-400">{plan.meetings}</p>
 							</div>
-							<p class="font-bold text-red-600">
-								{format(plan.price)}
-							</p>
+
+							{#if range}
+								<p class="font-bold text-red-600">
+									{range.min === range.max
+										? format(range.min)
+										: `${format(range.min)} - ${format(range.max)}`}
+								</p>
+							{/if}
 						</button>
 					{/each}
 				</div>
@@ -184,7 +230,11 @@
 		<div class="flex flex-col justify-between rounded-3xl border bg-white p-8 shadow-xl">
 			<!-- PATH -->
 			<div>
-				<p class="mb-4 text-sm text-gray-400">Learning Path</p>
+				<p class="mb-4 text-lg text-neutral-700">Learning Path</p>
+				<p class="mb-4 text-sm text-neutral-400">
+					Setiap level terdiri dari 24x pertemuan, program intensif akan selesai lebih cepat
+					daripada reguler.
+				</p>
 				<div class="mb-6 flex flex-wrap gap-2">
 					{#each getLevels() as l}
 						<span class="rounded-full bg-red-50 px-3 py-1 text-xs text-red-600">
@@ -204,6 +254,11 @@
 										pricing[lvl]?.[type]?.[0]?.price ??
 										0
 								)}
+								{#if selectedPlan === 0}
+									<span>x (3)</span>
+								{:else if selectedPlan === 1}
+									<span>x (2)</span>
+								{/if}
 							</span>
 						</div>
 					{/each}
