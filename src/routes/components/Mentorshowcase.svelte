@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { page } from '$app/state';
 	import { goto, afterNavigate } from '$app/navigation';
 	import { mentors } from '$lib/data/mentors';
 	import AutoScroll from 'embla-carousel-auto-scroll';
@@ -17,12 +16,6 @@
 			stopOnMouseEnter: true
 		})
 	];
-
-	document.body.classList.add('opacity-0');
-	setTimeout(() => {
-		scrollToTopSection();
-		document.body.classList.remove('opacity-0');
-	}, 150);
 
 	let pendingScrollTop = false;
 
@@ -51,6 +44,12 @@
 	}
 
 	onMount(() => {
+		document.body.classList.add('opacity-0');
+		setTimeout(() => {
+			scrollToTopSection();
+			document.body.classList.remove('opacity-0');
+		}, 150);
+
 		const unsubscribe = afterNavigate(() => {
 			if (pendingScrollTop) {
 				pendingScrollTop = false;
