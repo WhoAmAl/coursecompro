@@ -1,25 +1,29 @@
 <script>
+	import { goto } from '$app/navigation';
 	import Mentorshowcase from './Mentorshowcase.svelte';
 </script>
 
 <section class="bg-linear-to-r from-red-400 to-rose-500 py-12">
-	<div class="mb-14 flex flex-col items-start justify-between sm:flex-row sm:items-end">
-		<div class="max-w-2xl px-6 md:px-8">
+	<div
+		class="mb-14 flex flex-col items-start justify-between px-6 sm:flex-row sm:items-end md:px-8"
+	>
+		<div class="max-w-2xl">
 			<h3 class="mb-4 text-3xl font-bold text-neutral-100 md:text-4xl">
-				Diajar oleh Mentor yang <span class="text-red-700">Terbukti Berpengalaman</span>
+				Diajar oleh Mentor yang <span class="text-rose-900">Terbukti Berpengalaman</span>
 			</h3>
 			<p class="text-neutral-100">
 				Setiap mentor kami memiliki pengalaman nyata dan track record yang jelas.
 			</p>
 		</div>
 
-		<a
-			href="/mentors"
-			class="mt-5 flex items-center gap-2 px-6 text-sm font-semibold text-white/90 transition hover:text-white md:px-8"
+		<button
+			on:click={() => goto('/mentors')}
+			class="mt-5 flex cursor-pointer items-center gap-2 rounded-md border border-neutral-50 bg-neutral-50 px-6 py-2 text-sm
+			 font-semibold text-rose-500 transition hover:-translate-y-0.5 md:px-8"
 		>
 			Lihat Semua
 			<span class="transition group-hover:translate-x-1">→</span>
-		</a>
+		</button>
 	</div>
 
 	<Mentorshowcase />
