@@ -6,13 +6,7 @@
 		class="absolute top-20 right-0 h-[400px] w-[400px] rounded-full bg-rose-300 opacity-20 blur-3xl"
 	></div>
 
-	<!-- <div class="absolute top-20 left-10 hidden animate-pulse md:block">
-		<div class="rounded-full bg-white px-4 py-2 text-sm shadow-md">
-			🇨🇳 #1 Mandarin Class for Beginners
-		</div>
-	</div> -->
-
-	<div class="relative z-10 mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
+	<div class="relative z-10 mx-auto flex max-w-6xl flex-col items-center gap-12 lg:flex-row">
 		<div>
 			<h1 class="mb-6 text-4xl leading-tight font-extrabold md:text-6xl">
 				Belajar Mandarin <br />
@@ -52,21 +46,23 @@
 
 		<div class="relative">
 			<div
-				class="relative z-10 overflow-hidden rounded-3xl border border-neutral-100 bg-white p-6 shadow-xl"
+				class="relative z-10 aspect-[16/9] rounded-3xl border border-neutral-100 bg-white p-6 shadow-xl"
 			>
-				<img
-					src="https://i.pinimg.com/1200x/54/8f/60/548f6073ddd426818a06ce5c50e8e5e4.jpg"
-					alt=""
-					class="h-56 w-full rounded-2xl object-cover"
-				/>
+				<div class="h-auto w-full overflow-hidden rounded-3xl">
+					<img
+						src="https://i.pinimg.com/1200x/54/8f/60/548f6073ddd426818a06ce5c50e8e5e4.jpg"
+						alt=""
+						class="h-56 w-full rounded-2xl object-cover"
+					/>
+				</div>
 			</div>
 
 			<div class="absolute -top-6 -right-6 z-10 rounded-xl bg-white px-4 py-2 text-sm shadow-lg">
-				🎯 HSK Preparation
+				Persiapan HSK
 			</div>
 
-			<div class="absolute -bottom-10 -left-6 rounded-xl bg-white px-4 py-2 text-sm shadow-md">
-				💬 Daily Conversation
+			<div class="absolute -bottom-10 -left-6 z-10 rounded-xl bg-white px-4 py-2 text-sm shadow-md">
+				Kelas Conversation
 			</div>
 		</div>
 	</div>

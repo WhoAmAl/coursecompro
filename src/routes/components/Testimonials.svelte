@@ -49,7 +49,7 @@
 		</div>
 
 		<div class="grid grid-cols-1 gap-6 lg:grid-cols-12">
-			<div class="order-2 hidden flex-col gap-6 md:flex lg:order-1 lg:col-span-3">
+			<div class="order-2 hidden flex-col gap-6 lg:order-1 lg:col-span-3 lg:flex">
 				<div
 					class="flex h-full flex-col justify-between rounded-2xl border border-slate-100 bg-neutral-100 p-3 shadow-2xl transition-all duration-300 hover:bg-white hover:shadow-xl md:shadow-none"
 				>
@@ -69,7 +69,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="order-3 flex flex-col gap-6 md:hidden lg:col-span-3">
+			<div class="order-3 flex flex-col gap-6 lg:col-span-3 lg:hidden">
 				<div
 					class="flex h-full flex-col justify-between rounded-2xl border border-slate-100 bg-slate-50 p-6 transition-all duration-300 hover:bg-white hover:shadow-xl"
 				>
@@ -131,7 +131,7 @@
 			</div>
 
 			<div class="order-3 flex flex-col gap-6 lg:col-span-3">
-				<div class="order-2 hidden flex-col gap-6 md:flex lg:order-1 lg:col-span-3">
+				<div class="order-2 hidden flex-col gap-6 lg:order-1 lg:col-span-3 lg:flex">
 					<div
 						class="flex h-full flex-col justify-between rounded-2xl border border-slate-100 bg-neutral-100 p-3 shadow-2xl transition-all duration-300 hover:bg-white hover:shadow-xl md:shadow-none"
 					>
@@ -152,7 +152,7 @@
 					</div>
 				</div>
 				<div
-					class="flex h-full flex-col justify-between rounded-2xl border border-slate-100 bg-slate-50 p-6 transition-all duration-300 hover:bg-white hover:shadow-xl md:hidden"
+					class="flex h-full flex-col justify-between rounded-2xl border border-slate-100 bg-slate-50 p-6 transition-all duration-300 hover:bg-white hover:shadow-xl lg:hidden"
 				>
 					<p class="mb-6 text-sm leading-relaxed text-slate-600 italic">"{sidePerta[1].text}"</p>
 					<div class="flex items-center gap-3">

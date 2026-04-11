@@ -53,7 +53,7 @@
 		<p class="text-gray-500">Setiap model dirancang untuk gaya belajar yang berbeda.</p>
 	</div>
 
-	<div class="mx-auto grid max-w-6xl items-stretch gap-8 md:grid-cols-3">
+	<div class="mx-auto grid max-w-6xl items-stretch gap-15 md:grid-cols-3">
 		{#each classes as item}
 			<div
 				class="relative rounded-3xl transition-all duration-300 {item.isPopular
