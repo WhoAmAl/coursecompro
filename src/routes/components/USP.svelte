@@ -86,7 +86,7 @@
 
 				<div class="mt-8">
 					<button
-						class="w-full rounded-xl bg-gradient-to-r from-red-600 to-rose-400 py-3 text-sm font-semibold text-white shadow-md transition hover:scale-[1.02]"
+						class="w-full rounded-xl bg-linear-to-r from-red-500 to-rose-600 py-3 text-sm font-semibold text-white shadow-md transition hover:scale-[1.02]"
 					>
 						Konsultasi Lebih lanjut
 					</button>

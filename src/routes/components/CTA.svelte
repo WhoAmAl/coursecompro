@@ -25,13 +25,13 @@
 		<div class="flex flex-col justify-center gap-4 sm:flex-row">
 			<button
 				on:click={() => goto('/pricing')}
-				class="rounded-2xl bg-white px-8 py-4 font-semibold text-red-600 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-xl"
+				class="cursor-pointer rounded-2xl bg-white px-8 py-4 font-semibold text-red-600 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-xl"
 			>
 				Cek pricing
 			</button>
 
 			<button
-				class="rounded-2xl border border-white/60 px-8 py-4 font-semibold transition hover:bg-white/10"
+				class="cursor-pointer rounded-2xl border border-white/60 px-8 py-4 font-semibold transition hover:bg-white/10"
 			>
 				Konsultasi Segera
 			</button>

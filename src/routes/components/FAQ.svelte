@@ -50,7 +50,7 @@
 			>
 				<button
 					on:click={() => toggle(i)}
-					class="group flex w-full items-center justify-between px-6 py-5 text-left"
+					class="group flex w-full cursor-pointer items-center justify-between px-6 py-5 text-left"
 				>
 					<span class="font-medium text-gray-800 transition group-hover:text-red-600">
 						{item.q}

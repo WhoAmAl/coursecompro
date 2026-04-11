@@ -104,7 +104,7 @@
 				</div>
 				<button
 					on:click={() => navigateToMentor(m.slug)}
-					class="mt-4 w-full rounded-xl bg-red-50 py-2 text-center text-sm font-semibold text-red-600 transition hover:bg-red-100"
+					class="mt-4 w-full cursor-pointer rounded-xl bg-linear-to-r from-red-500 to-rose-600 py-2 text-center text-sm font-semibold text-neutral-100 transition hover:-translate-y-0.5"
 				>
 					Lihat Profil
 				</button>

@@ -126,10 +126,10 @@
 						</ul>
 
 						<button
-							class="w-full rounded-xl py-3 font-semibold transition
+							class="w-full cursor-pointer rounded-xl py-3 font-semibold transition
                             {item.isPopular
-								? 'bg-gradient-to-r from-red-600 to-rose-400 text-white shadow hover:scale-105'
-								: 'border border-gray-200 hover:border-red-400 hover:text-red-600'}"
+								? 'bg-linear-to-r from-red-500 to-rose-600 text-white shadow hover:scale-105'
+								: 'border border-red-400 text-red-500 hover:text-red-600'}"
 						>
 							Pilih Kelas
 						</button>

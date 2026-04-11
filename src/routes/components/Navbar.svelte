@@ -4,7 +4,15 @@
 	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
 	import { afterNavigate } from '$app/navigation';
-	import { GraduationCap, House, MessageCircle, Phone, TextAlignEnd, X } from '@lucide/svelte';
+	import {
+		GraduationCap,
+		House,
+		MessageCircle,
+		Phone,
+		Tags,
+		TextAlignEnd,
+		X
+	} from '@lucide/svelte';
 	import { browser } from '$app/environment';
 	import { slide, scale } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
@@ -57,7 +65,8 @@
 		{ label: 'Home', icon: House, url: '/#home' },
 		{ label: 'Mentor', icon: GraduationCap, url: '/mentors' },
 		{ label: 'Testimoni', icon: MessageCircle, url: '/#testimonials' },
-		{ label: 'Contact', icon: Phone, url: '/contactus' }
+		{ label: 'Contact', icon: Phone, url: '/contactus' },
+		{ label: 'Pricing', icon: Tags, url: '/pricing' }
 	];
 
 	let open = $state(false);
@@ -146,13 +155,19 @@
 			<div class="flex h-full flex-col justify-between px-5 py-6">
 				<nav class="mx-auto flex w-full flex-col">
 					{#each navItems as menu, i}
-						<a
-							href={menu.url}
-							class="flex items-center justify-between py-3 text-base font-medium text-neutral-700"
+						<button
+							on:click={() => goto(menu.url)}
+							class="flex items-center gap-3 py-3 text-base font-medium text-neutral-700"
 							on:click={() => (open = false)}
 						>
+							{#if typeof menu.icon === 'string'}
+								<span class="text-lg">{menu.icon}</span>
+							{:else}
+								{@const Icon = menu.icon}
+								<Icon class="h-7 w-7" />
+							{/if}
 							{menu.label}
-						</a>
+						</button>
 
 						<div class="border-b border-neutral-200"></div>
 					{/each}
@@ -161,25 +176,3 @@
 		</div>
 	{/if}
 </nav>
-
-<div class="fixed bottom-0 left-1/2 z-50 w-full -translate-x-1/2 md:hidden">
-	<div
-		class="flex items-center justify-between border border-white/40 bg-white/80 px-10 py-3 shadow-lg backdrop-blur-md"
-	>
-		{#each navItems as item}
-			<button
-				on:click={() => navigateTo(item.url)}
-				class="flex flex-col items-center text-xs text-gray-500 transition hover:text-red-600"
-			>
-				{#if typeof item.icon === 'string'}
-					<span class="text-lg">{item.icon}</span>
-				{:else}
-					{@const Icon = item.icon}
-					<Icon class="h-7 w-7" />
-				{/if}
-
-				<span class="text-sm">{item.label}</span>
-			</button>
-		{/each}
-	</div>
-</div>
