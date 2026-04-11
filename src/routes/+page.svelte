@@ -5,6 +5,7 @@
 	import Herosection from './components/Herosection.svelte';
 	import Mentors from './components/Mentors.svelte';
 	import Personalisation from './components/Personalisation.svelte';
+	import Studysteps from './components/Studysteps.svelte';
 	import Testimonials from './components/Testimonials.svelte';
 	import UserPersonalisation from './components/UserPersonalisation.svelte';
 	import USP from './components/USP.svelte';
@@ -15,7 +16,7 @@
 	<USP />
 	<Personalisation />
 	<ClassMenu />
-	<UserPersonalisation />
+	<!-- <Studysteps /> -->
 	<Mentors />
 	<Testimonials />
 	<FAQ />
