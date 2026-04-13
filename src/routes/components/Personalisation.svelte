@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { Button } from '$lib/components/ui/button';
+	import { Card } from '$lib/components/ui/card';
+
 	const modes = ['study', 'conversation'] as const;
 
 	let selected = $state<(typeof modes)[number]>('study');
@@ -26,7 +29,6 @@
 </script>
 
 <section class="bg-white px-6 py-24 md:px-8">
-	<!-- Heading -->
 	<div class="mx-auto mb-16 max-w-3xl text-center">
 		<h3 class="mb-4 text-3xl leading-tight font-bold md:text-4xl">
 			Apa itu <span class="text-red-500">HSK?</span>
@@ -38,24 +40,22 @@
 	</div>
 
 	<div class="mx-auto max-w-4xl">
-		<!-- Options -->
 		<div class="mb-10 grid gap-4 md:grid-cols-2">
 			{#each modes as m}
-				<button
-					on:click={() => (selected = m)}
-					class={`rounded-xl border p-5 text-left transition-all
-					${selected === m ? 'border-red-500 bg-red-50 shadow-sm' : 'border-gray-200 hover:border-red-300'}`}
+				<Button
+					onclick={() => (selected = m)}
+					class={`text-md flex cursor-pointer flex-col items-start gap-0 rounded-xl border px-5 py-10 text-left transition-all hover:bg-red-100
+					${selected === m ? 'border-red-500 bg-red-50 shadow-sm' : 'border-gray-200 bg-transparent hover:border-red-300'}`}
 				>
 					<h4 class="font-semibold text-gray-800">
 						{paths[m].label}
 					</h4>
 					<p class="text-xs text-gray-500">{paths[m].sub}</p>
-				</button>
+				</Button>
 			{/each}
 		</div>
 
-		<!-- Result Card -->
-		<div class="rounded-3xl border border-gray-100 bg-white p-8 shadow-lg transition-all">
+		<Card class="text-md rounded-3xl border border-gray-100 bg-white p-8 shadow-lg transition-all">
 			<h4 class="mb-2 text-xl font-semibold text-gray-800">
 				{paths[selected].title}
 			</h4>
@@ -87,12 +87,11 @@
 				</div>
 			</div>
 
-			<!-- CTA -->
-			<button
-				class="mt-8 w-full rounded-xl bg-linear-to-r from-red-500 to-rose-600 py-3 text-sm font-semibold text-white shadow transition hover:scale-[1.02]"
+			<Button
+				class="mt-8 w-full cursor-pointer rounded-xl bg-linear-to-r from-red-500 to-rose-600 py-3 py-5 text-sm font-semibold text-white shadow transition hover:scale-[1.02]"
 			>
 				Konsultasi Gratis
-			</button>
-		</div>
+			</Button>
+		</Card>
 	</div>
 </section>

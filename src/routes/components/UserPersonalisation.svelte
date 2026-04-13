@@ -1,4 +1,8 @@
 <script lang="ts">
+	import { Badge } from '$lib/components/ui/badge';
+	import { Button } from '$lib/components/ui/button';
+	import { Select, SelectContent, SelectItem, SelectTrigger } from '$lib/components/ui/select';
+
 	type Plan = {
 		label: string;
 		price: number;
@@ -8,16 +12,19 @@
 
 	type ClassType = 'private' | 'semi' | 'group';
 	type Level = 1 | 2 | 3 | 4 | 5;
-
 	type Pricing = Record<Level, Record<ClassType, Plan[]>>;
 
 	const classTypes: ClassType[] = ['private', 'semi', 'group'];
 	const levels: Level[] = [1, 2, 3, 4, 5];
 
-	let start = $state<Level>(1);
-	let end = $state<Level>(2);
+	let start = $state<string>('1');
+	let end = $state<string>('1');
 	let type = $state<ClassType>('semi');
 	let selectedPlan = $state(0);
+
+	function toLevel(v: string): Level {
+		return Number(v) as Level;
+	}
 
 	const pricing: Pricing = {
 		1: {
@@ -97,19 +104,17 @@
 	};
 
 	function getLevels(): Level[] {
-		return levels.filter((l) => l >= start && l <= end);
+		const s = toLevel(start);
+		const e = toLevel(end);
+		return levels.filter((l) => l >= s && l <= e);
 	}
 
 	function total(): number {
 		let sum = 0;
-
 		for (const lvl of getLevels()) {
 			const plan = pricing[lvl]?.[type]?.[selectedPlan];
-			if (plan) {
-				sum += plan.price * plan.duration;
-			}
+			if (plan) sum += plan.price * plan.duration;
 		}
-
 		return sum;
 	}
 
@@ -118,71 +123,68 @@
 	}
 
 	$effect(() => {
-		if (start > end) {
+		if (toLevel(start) > toLevel(end)) {
 			end = start;
 		}
 	});
 
 	function priceRangeByIndex(index: number) {
-		let prices: number[] = [];
+		const prices = getLevels()
+			.map((lvl) => pricing[lvl]?.[type]?.[index]?.price)
+			.filter(Boolean) as number[];
 
-		for (const lvl of getLevels()) {
-			const plan = pricing[lvl]?.[type]?.[index];
-			if (plan) {
-				prices.push(plan.price);
-			}
-		}
-
-		if (prices.length === 0) return null;
+		if (!prices.length) return null;
 
 		return {
 			min: Math.min(...prices),
 			max: Math.max(...prices)
 		};
 	}
+
+	const startLabel = $derived(`Mulai HSK ${start}`);
+	const endLabel = $derived(`Sampai HSK ${end}`);
 </script>
 
 <section class="bg-linear-to-b from-white to-red-50/30 px-6 py-16">
 	<div class="mx-auto grid max-w-6xl gap-10 md:grid-cols-2">
-		<!-- LEFT: CONFIG -->
 		<div>
 			<h3 class="mb-6 text-3xl font-bold">
 				Custom <span class="text-red-500">Learning Plan</span>
 			</h3>
-			<p class="mb-8 text-gray-500">
-				Atur bagaimana kamu ingin belajar bahasa Mandarin, berikut adalah kalkulator sederhana bagi
-				kamu untuk mengestimasikan biaya. Sesuaikan perjalanan belajar kamu secara fleksibel.
-			</p>
 
 			<div class="space-y-6 rounded-3xl border bg-white p-6 shadow-lg">
-				<!-- LEVEL -->
 				<div class="grid grid-cols-2 gap-3">
-					<select bind:value={start} class="rounded-xl border p-3">
-						{#each [1, 2, 3, 4, 5] as l}
-							<option value={l}>Mulai HSK {l}</option>
-						{/each}
-					</select>
+					<Select type="single" bind:value={start}>
+						<SelectTrigger class="w-full cursor-pointer">{startLabel}</SelectTrigger>
 
-					<select bind:value={end} class="rounded-xl border p-3">
-						{#each [1, 2, 3, 4, 5] as l}
-							<option value={l} disabled={l < start}>
-								Sampai HSK {l}
-							</option>
-						{/each}
-					</select>
+						<SelectContent>
+							{#each levels as l}
+								<SelectItem class="cursor-pointer" value={String(l)}>
+									Mulai HSK {l}
+								</SelectItem>
+							{/each}
+						</SelectContent>
+					</Select>
+
+					<Select type="single" bind:value={end}>
+						<SelectTrigger class="w-full cursor-pointer">{endLabel}</SelectTrigger>
+
+						<SelectContent>
+							{#each levels as l}
+								<SelectItem class="cursor-pointer" value={String(l)} disabled={l < toLevel(start)}>
+									Sampai HSK {l}
+								</SelectItem>
+							{/each}
+						</SelectContent>
+					</Select>
 				</div>
 
-				<!-- TYPE -->
 				<div class="grid grid-cols-3 gap-3">
 					{#each classTypes as t}
-						<button
-							on:click={() => (type = t)}
-							class={`rounded-xl border p-4 transition-all
-							${
-								type === t
-									? 'scale-[1.02] border-red-500 bg-red-50 shadow-md'
-									: 'border-gray-200 hover:border-red-300'
-							}`}
+						<Button
+							onclick={() => (type = t)}
+							class={`flex cursor-pointer flex-col items-center rounded-xl border px-4 py-8 text-neutral-950 transition-all hover:bg-red-100
+							${type === t ? 'border-red-500 bg-red-50' : 'border-gray-200 bg-transparent hover:border-red-300'}`}
 						>
 							<p class="font-semibold capitalize">
 								{t === 'semi' ? 'Semi Private' : t}
@@ -194,22 +196,21 @@
 							{:else}
 								<p class="text-sm text-neutral-400 capitalize">5-8 Orang</p>
 							{/if}
-						</button>
+						</Button>
 					{/each}
 				</div>
 
-				<!-- PLAN -->
 				<div class="grid gap-3">
-					{#each pricing[start][type] as plan, i}
+					{#each pricing[toLevel(start)][type] as plan, i}
 						{@const range = priceRangeByIndex(i)}
 
-						<button
-							on:click={() => (selectedPlan = i)}
-							class={`flex items-center justify-between rounded-xl border p-4 transition-all
-			${selectedPlan === i ? 'border-red-500 bg-red-50' : 'border-gray-200 hover:border-red-300'}`}
+						<Button
+							onclick={() => (selectedPlan = i)}
+							class={`flex cursor-pointer justify-between rounded-xl border border-gray-200 bg-transparent p-4 py-8 hover:border-red-300 hover:bg-red-100
+							${selectedPlan === i ? 'border-red-500 bg-red-50' : 'border-gray-200'}`}
 						>
-							<div>
-								<p class="font-semibold">{plan.label}</p>
+							<div class="text-neutral-950">
+								<p>{plan.label}</p>
 								<p class="text-xs text-gray-400">{plan.meetings}</p>
 							</div>
 
@@ -220,15 +221,13 @@
 										: `${format(range.min)} - ${format(range.max)}`}
 								</p>
 							{/if}
-						</button>
+						</Button>
 					{/each}
 				</div>
 			</div>
 		</div>
 
-		<!-- RIGHT: RESULT -->
 		<div class="flex flex-col justify-between rounded-3xl border bg-white p-8 shadow-xl">
-			<!-- PATH -->
 			<div>
 				<p class="mb-4 text-lg text-neutral-700">Learning Path</p>
 				<p class="mb-4 text-sm text-neutral-400">
@@ -237,13 +236,9 @@
 				</p>
 				<div class="mb-6 flex flex-wrap gap-2">
 					{#each getLevels() as l}
-						<span class="rounded-full bg-red-50 px-3 py-1 text-xs text-red-600">
-							HSK {l}
-						</span>
+						<Badge class="rounded-full bg-red-50 px-3 py-1 text-xs text-red-600">HSK {l}</Badge>
 					{/each}
 				</div>
-
-				<!-- BREAKDOWN -->
 				<div class="space-y-2 text-sm">
 					{#each getLevels() as lvl}
 						<div class="flex justify-between">
@@ -264,19 +259,14 @@
 					{/each}
 				</div>
 			</div>
-
-			<!-- TOTAL -->
 			<div class="mt-8 border-t pt-6">
 				<p class="text-xs text-gray-400">Total Estimasi</p>
-				<p class="text-3xl font-bold text-red-600">
-					{format(total())}
-				</p>
-
-				<button
-					class="mt-4 w-full rounded-xl bg-linear-to-r from-red-600 to-rose-400 py-3 font-semibold text-white shadow transition hover:scale-[1.03]"
+				<p class="text-3xl font-bold text-red-600">{format(total())}</p>
+				<Button
+					class="mt-4 w-full cursor-pointer rounded-xl border border-red-500 bg-transparent py-5 font-semibold text-red-500 shadow transition hover:scale-[1.03] hover:text-neutral-100"
 				>
 					Konsultasi Sekarang
-				</button>
+				</Button>
 			</div>
 		</div>
 	</div>

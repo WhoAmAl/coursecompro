@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
 </script>
 
-<section class="relative overflow-hidden px-6 py-24 md:px-8">
+<section id="CTA" class="relative overflow-hidden px-6 py-24 md:px-8">
 	<div class="absolute inset-0 bg-gradient-to-r from-red-500 to-rose-400"></div>
 
 	<div

@@ -1,4 +1,5 @@
 <script>
+	import { Button } from '$lib/components/ui/button';
 	import { Check } from '@lucide/svelte';
 	const levels = ['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5'];
 
@@ -45,7 +46,7 @@
 	];
 </script>
 
-<section class="bg-linear-to-b from-white to-red-50/20 px-6 py-24 md:px-8">
+<section id="jenis-kelas" class="bg-linear-to-b from-white to-red-50/20 px-6 py-24 md:px-8">
 	<div class="mx-auto mb-16 max-w-2xl text-center">
 		<h3 class="mb-4 text-3xl font-bold md:text-4xl">
 			Pilih Model Kelas yang <span class="text-red-600">Paling Cocok</span>
@@ -125,14 +126,14 @@
 							{/each}
 						</ul>
 
-						<button
-							class="w-full cursor-pointer rounded-xl py-3 font-semibold transition
+						<Button
+							class="w-full cursor-pointer rounded-xl py-5 font-semibold transition
                             {item.isPopular
 								? 'bg-linear-to-r from-red-500 to-rose-600 text-white shadow hover:scale-105'
-								: 'border border-red-400 text-red-500 hover:text-red-600'}"
+								: 'border border-red-400 bg-transparent text-red-500 hover:bg-red-100 hover:text-red-600'}"
 						>
 							Pilih Kelas
-						</button>
+						</Button>
 					</div>
 				</div>
 			</div>
