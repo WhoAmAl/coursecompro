@@ -1,5 +1,6 @@
 <script>
 	import { goto } from '$app/navigation';
+	import { Button } from '$lib/components/ui/button';
 	import Mentorshowcase from './Mentorshowcase.svelte';
 </script>
 
@@ -16,14 +17,14 @@
 			</p>
 		</div>
 
-		<button
-			on:click={() => goto('/mentors')}
-			class="mt-5 flex cursor-pointer items-center gap-2 rounded-md border border-neutral-50 bg-neutral-50 px-6 py-2 text-sm
-			 font-semibold text-rose-500 transition hover:-translate-y-0.5 md:px-8"
+		<Button
+			onclick={() => goto('/mentors')}
+			class="mt-5 flex cursor-pointer items-center gap-2 rounded-md border border-neutral-50 bg-neutral-50 px-6 py-3 text-sm font-semibold
+			 text-rose-500 transition hover:-translate-y-0.5 hover:bg-white md:px-8"
 		>
 			Lihat Semua
 			<span class="transition group-hover:translate-x-1">→</span>
-		</button>
+		</Button>
 	</div>
 
 	<Mentorshowcase />

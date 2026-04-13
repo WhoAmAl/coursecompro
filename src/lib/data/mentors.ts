@@ -18,7 +18,7 @@ export const mentors: Mentor[] = [
 		students: '500+ Siswa',
 		rating: '4.9',
 		desc: 'Spesialis membantu siswa berbicara natural seperti penutur asli.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Chen Yu',
@@ -28,7 +28,7 @@ export const mentors: Mentor[] = [
 		students: '300+ Siswa',
 		rating: '4.8',
 		desc: 'Fokus pada strategi cepat dan efektif untuk lulus HSK.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Andi',
@@ -38,7 +38,7 @@ export const mentors: Mentor[] = [
 		students: '400+ Siswa',
 		rating: '4.9',
 		desc: 'Pendekatan santai dan mudah dipahami untuk pemula.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Zhang Min',
@@ -48,7 +48,7 @@ export const mentors: Mentor[] = [
 		students: '450+ Siswa',
 		rating: '4.8',
 		desc: 'Fokus meningkatkan kepercayaan diri dalam percakapan sehari-hari.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Liu Fang',
@@ -58,7 +58,7 @@ export const mentors: Mentor[] = [
 		students: '600+ Siswa',
 		rating: '4.9',
 		desc: 'Ahli dalam menjelaskan grammar dengan cara sederhana.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Wang Lei',
@@ -68,7 +68,7 @@ export const mentors: Mentor[] = [
 		students: '700+ Siswa',
 		rating: '5.0',
 		desc: 'Spesialis bahasa Mandarin untuk kebutuhan profesional.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Dewi',
@@ -78,7 +78,7 @@ export const mentors: Mentor[] = [
 		students: '350+ Siswa',
 		rating: '4.7',
 		desc: 'Cocok untuk kamu yang baru mulai belajar dari nol.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Huang Jie',
@@ -88,7 +88,7 @@ export const mentors: Mentor[] = [
 		students: '420+ Siswa',
 		rating: '4.8',
 		desc: 'Fokus pada pelafalan dan tone Mandarin yang tepat.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Rina',
@@ -98,7 +98,7 @@ export const mentors: Mentor[] = [
 		students: '380+ Siswa',
 		rating: '4.9',
 		desc: 'Belajar Mandarin praktis untuk kehidupan sehari-hari.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Sun Hao',
@@ -108,7 +108,7 @@ export const mentors: Mentor[] = [
 		students: '550+ Siswa',
 		rating: '4.9',
 		desc: 'Membantu siswa mencapai level HSK tinggi dengan cepat.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Mei Lin',
@@ -118,7 +118,7 @@ export const mentors: Mentor[] = [
 		students: '300+ Siswa',
 		rating: '4.8',
 		desc: 'Pendekatan fun dan interaktif untuk anak-anak.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Budi',
@@ -128,7 +128,7 @@ export const mentors: Mentor[] = [
 		students: '410+ Siswa',
 		rating: '4.7',
 		desc: 'Latihan intensif untuk meningkatkan skill berbicara.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Zhao Yun',
@@ -138,7 +138,7 @@ export const mentors: Mentor[] = [
 		students: '620+ Siswa',
 		rating: '4.9',
 		desc: 'Program belajar cepat dengan hasil maksimal.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Siti',
@@ -148,7 +148,7 @@ export const mentors: Mentor[] = [
 		students: '290+ Siswa',
 		rating: '4.8',
 		desc: 'Gaya mengajar santai dan mudah dipahami.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Guo Ming',
@@ -158,7 +158,7 @@ export const mentors: Mentor[] = [
 		students: '500+ Siswa',
 		rating: '4.9',
 		desc: 'Melatih kemampuan listening hingga level native.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Kevin',
@@ -168,7 +168,7 @@ export const mentors: Mentor[] = [
 		students: '360+ Siswa',
 		rating: '4.7',
 		desc: 'Strategi jitu menghadapi ujian Mandarin.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Tang Wei',
@@ -178,7 +178,7 @@ export const mentors: Mentor[] = [
 		students: '540+ Siswa',
 		rating: '4.9',
 		desc: 'Membantu siswa berbicara lebih lancar dan natural.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Nina',
@@ -188,7 +188,7 @@ export const mentors: Mentor[] = [
 		students: '250+ Siswa',
 		rating: '4.7',
 		desc: 'Mentor ramah untuk pemula tanpa pengalaman.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Lin Tao',
@@ -198,7 +198,7 @@ export const mentors: Mentor[] = [
 		students: '430+ Siswa',
 		rating: '4.8',
 		desc: 'Fokus pada aksen dan intonasi yang tepat.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Agus',
@@ -208,7 +208,7 @@ export const mentors: Mentor[] = [
 		students: '300+ Siswa',
 		rating: '4.6',
 		desc: 'Belajar santai tanpa tekanan tapi tetap efektif.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Zhou Li',
@@ -218,7 +218,7 @@ export const mentors: Mentor[] = [
 		students: '600+ Siswa',
 		rating: '4.9',
 		desc: 'Ahli dalam penulisan karakter Mandarin.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Clara',
@@ -228,7 +228,7 @@ export const mentors: Mentor[] = [
 		students: '370+ Siswa',
 		rating: '4.8',
 		desc: 'Partner latihan speaking yang interaktif.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Chen Hao',
@@ -238,7 +238,7 @@ export const mentors: Mentor[] = [
 		students: '750+ Siswa',
 		rating: '5.0',
 		desc: 'Mentor untuk level advanced dan profesional.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Yuni',
@@ -248,7 +248,7 @@ export const mentors: Mentor[] = [
 		students: '310+ Siswa',
 		rating: '4.7',
 		desc: 'Membantu siswa tetap konsisten belajar.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Feng Li',
@@ -258,7 +258,7 @@ export const mentors: Mentor[] = [
 		students: '520+ Siswa',
 		rating: '4.9',
 		desc: 'Fokus memperkaya kosakata secara cepat.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Dian',
@@ -268,7 +268,7 @@ export const mentors: Mentor[] = [
 		students: '400+ Siswa',
 		rating: '4.8',
 		desc: 'Metode belajar interaktif dan tidak membosankan.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Xu Jian',
@@ -278,7 +278,7 @@ export const mentors: Mentor[] = [
 		students: '800+ Siswa',
 		rating: '5.0',
 		desc: 'Pengalaman luas dalam mengajar berbagai level.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	},
 	{
 		name: 'Aulia',
@@ -288,6 +288,6 @@ export const mentors: Mentor[] = [
 		students: '280+ Siswa',
 		rating: '4.6',
 		desc: 'Jadwal fleksibel dan metode adaptif sesuai siswa.',
-		pict: 'https://i.pinimg.com/736x/87/22/ec/8722ec261ddc86a44e7feb3b46836c10.jpg'
+		pict: ''
 	}
 ];

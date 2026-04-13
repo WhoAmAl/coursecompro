@@ -4,6 +4,8 @@
 	import { mentors } from '$lib/data/mentors';
 	import AutoScroll from 'embla-carousel-auto-scroll';
 	import emblaCarouselSvelte from 'embla-carousel-svelte';
+	import { Button } from '$lib/components/ui/button';
+	import { Avatar, AvatarFallback, AvatarImage } from '$lib/components/ui/avatar';
 
 	const options = {
 		loop: true
@@ -54,7 +56,6 @@
 			if (pendingScrollTop) {
 				pendingScrollTop = false;
 
-				// delay kecil
 				setTimeout(() => {
 					scrollToTopSection();
 				}, 150);
@@ -63,20 +64,41 @@
 
 		return unsubscribe;
 	});
+
+	function getInitials(name: string): string {
+		if (!name) return '';
+
+		return name
+			.trim()
+			.split(/\s+/)
+			.filter(Boolean)
+			.slice(0, 2)
+			.map((word) => word.charAt(0))
+			.join('')
+			.toUpperCase();
+	}
 </script>
 
 <div class="mt-8 w-full overflow-hidden" use:emblaCarouselSvelte={{ options, plugins }}>
 	<div class="flex w-full">
 		{#each mentors as m}
+			<!-- svelte-ignore a11y_no_static_element_interactions -->
+			<!-- svelte-ignore a11y_click_events_have_key_events -->
 			<div
-				class="group mr-4 flex max-w-[420px] flex-none basis-[85%]
+				onclick={() => navigateToMentor(m.slug)}
+				class="group mr-4 flex max-w-105 flex-none basis-[85%] cursor-pointer
 		flex-col justify-between rounded-2xl border
 		border-gray-300
 		bg-neutral-50 p-6 transition-all duration-300
 		hover:border-red-300 hover:shadow-lg sm:basis-[70%] md:basis-[45%] lg:basis-[32%]"
 			>
 				<div class="mb-4 flex items-center gap-4">
-					<div class="h-12 w-12 rounded-full bg-gray-200"></div>
+					<Avatar>
+						<AvatarImage src={m.pict} alt={m.name} />
+						<AvatarFallback class="bg-linear-to-br from-red-500 to-rose-500 text-neutral-100"
+							>{getInitials(m.name)}</AvatarFallback
+						>
+					</Avatar>
 
 					<div>
 						<h4 class="font-semibold">{m.name}</h4>
@@ -102,12 +124,12 @@
 						<p class="text-xs text-gray-400">Rating</p>
 					</div>
 				</div>
-				<button
-					on:click={() => navigateToMentor(m.slug)}
-					class="mt-4 w-full cursor-pointer rounded-xl bg-linear-to-r from-red-500 to-rose-600 py-2 text-center text-sm font-semibold text-neutral-100 transition hover:-translate-y-0.5"
+				<Button
+					onclick={() => navigateToMentor(m.slug)}
+					class="mt-4 w-full cursor-pointer rounded-xl bg-linear-to-r from-red-500 to-rose-600 py-4 text-center text-sm font-semibold text-neutral-100 transition hover:-translate-y-0.5"
 				>
 					Lihat Profil
-				</button>
+				</Button>
 			</div>
 		{/each}
 	</div>
