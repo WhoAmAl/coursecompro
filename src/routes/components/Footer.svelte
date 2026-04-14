@@ -4,7 +4,7 @@
 			<h2
 				class="mb-4 bg-gradient-to-r from-red-600 to-rose-400 bg-clip-text text-xl font-bold text-transparent"
 			>
-				MandarinPals
+				COURSENAME
 			</h2>
 			<p class="text-sm leading-relaxed text-gray-500">
 				Platform belajar Mandarin yang membantu kamu berkembang dari nol sampai percaya diri
@@ -25,9 +25,9 @@
 		<div>
 			<h4 class="mb-4 font-semibold text-gray-800">Kontak</h4>
 			<ul class="space-y-2 text-sm text-gray-500">
-				<li>Email: hello@mandarinpals.com</li>
+				<li>Email: hello@COURSENAME.com</li>
 				<li>WhatsApp: +62 812-xxxx-xxxx</li>
-				<li>Instagram: @mandarinpals</li>
+				<li>Instagram: @COURSENAME</li>
 			</ul>
 		</div>
 	</div>
@@ -35,7 +35,7 @@
 	<div
 		class="mx-auto mt-12 flex max-w-6xl flex-col items-center justify-between border-t border-gray-200 pt-6 text-sm text-gray-400 md:flex-row"
 	>
-		<p>© 2026 MandarinPals. All rights reserved.</p>
+		<p>© 2026 COURSENAME. All rights reserved.</p>
 
 		<div class="mt-4 flex gap-4 md:mt-0">
 			<a href="#" class="transition hover:text-red-600">Privacy</a>

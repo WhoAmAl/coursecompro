@@ -101,7 +101,7 @@
 	<div class="flex w-full flex-row justify-between">
 		<h1 class="text-xl font-bold tracking-tight">
 			<span class="bg-gradient-to-r from-red-600 to-rose-400 bg-clip-text text-transparent">
-				MandarinPals
+				COURSENAME
 			</span>
 		</h1>
 

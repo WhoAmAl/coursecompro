@@ -6,9 +6,9 @@
 	<div class="mx-auto max-w-6xl">
 		<div class="mb-14 text-center">
 			<h1 class="text-3xl font-bold md:text-4xl">
-				Mentor <span class="text-red-500">MandarinPals</span>
+				Mentor <span class="text-red-500">COURSENAME</span>
 			</h1>
-			<p class="mt-2 text-gray-500">Mentor terbaik bisa kamu temukan di MandarinPals.</p>
+			<p class="mt-2 text-gray-500">Mentor terbaik bisa kamu temukan di COURSENAME.</p>
 		</div>
 
 		<div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3">

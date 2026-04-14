@@ -35,7 +35,7 @@
 			</h3>
 
 			<p class="mb-8 leading-relaxed text-white/80">
-				MandarinPals dirancang untuk kamu yang serius ingin bisa Mandarin, tanpa ribet, tanpa buang
+				COURSENAME dirancang untuk kamu yang serius ingin bisa Mandarin, tanpa ribet, tanpa buang
 				waktu, dan tetap enjoyable.
 			</p>
 
