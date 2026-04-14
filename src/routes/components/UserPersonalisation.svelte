@@ -186,7 +186,7 @@
 							class={`flex cursor-pointer flex-col items-center rounded-xl border px-4 py-8 text-neutral-950 transition-all hover:bg-red-100
 							${type === t ? 'border-red-500 bg-red-50' : 'border-gray-200 bg-transparent hover:border-red-300'}`}
 						>
-							<p class="font-semibold capitalize">
+							<p class="font-semibold whitespace-break-spaces capitalize">
 								{t === 'semi' ? 'Semi Private' : t}
 							</p>
 							{#if t === 'private'}
@@ -215,7 +215,7 @@
 							</div>
 
 							{#if range}
-								<p class="font-bold text-red-600">
+								<p class="md:text-md text-xs font-bold text-red-600">
 									{range.min === range.max
 										? format(range.min)
 										: `${format(range.min)} - ${format(range.max)}`}

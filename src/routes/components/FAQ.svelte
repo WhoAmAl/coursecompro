@@ -32,7 +32,7 @@
 </script>
 
 <section
-	class="flex flex-col items-center bg-linear-to-b from-white to-red-50/20 px-6 py-20 sm:flex-row md:px-8"
+	class="flex flex-col items-center gap-5 bg-linear-to-b from-white to-red-50/20 px-6 py-20 sm:flex-row md:px-8"
 >
 	<div class="mx-auto mb-14 w-full max-w-2xl text-center sm:w-1/3">
 		<h3 class="mb-4 text-3xl font-bold md:text-4xl">
@@ -53,7 +53,9 @@
 					onclick={() => toggle(i)}
 					class="group text-md flex w-full cursor-pointer items-center justify-between bg-transparent px-6 py-7 text-left hover:bg-transparent"
 				>
-					<span class="font-medium text-gray-800 transition group-hover:text-red-600">
+					<span
+						class="w-full text-sm font-medium whitespace-break-spaces text-gray-800 transition group-hover:text-red-600 md:text-lg"
+					>
 						{item.q}
 					</span>
 

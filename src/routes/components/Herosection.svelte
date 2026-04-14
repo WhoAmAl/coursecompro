@@ -207,7 +207,7 @@
 					class="w-full cursor-pointer rounded-xl bg-red-600 py-5 text-sm font-bold text-white shadow-md shadow-red-200 transition-colors duration-200 hover:bg-red-700"
 				>
 					Daftar Kelas Sekarang →
-				</Button> -->
+				</Button>
 			</CardContent>
 		</Card>
 	</div>
