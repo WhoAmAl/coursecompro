@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Channel from './components/Channel.svelte';
-	import Contactsection from './components/Contactsection.svelte';
-	import Footer from './components/Footer.svelte';
+	import Contactsection from '$lib/components/contactus/Contactsection.svelte';
+	import Channel from '../../lib/components/contactus/Channel.svelte';
+	import Footer from '../../lib/components/contactus/Footer.svelte';
 
 	const phone = '6281234567890';
 	const message = encodeURIComponent('Halo, saya ingin bertanya tentang program belajar.');
