@@ -63,7 +63,7 @@
 			>
 				<div
 					class="h-full rounded-3xl {item.isPopular
-						? 'bg-gradient-to-br from-red-500 to-rose-400 p-[2px]'
+						? 'bg-linear-to-br from-red-500 to-rose-400 p-0.5'
 						: 'border border-gray-200'}"
 				>
 					<div class="flex h-full flex-col rounded-3xl bg-white p-8">
@@ -110,17 +110,17 @@
 							{/each}
 						</div>
 
-						<ul class="mb-8 flex-grow space-y-3 text-sm">
+						<ul class="mb-8 grow space-y-3 text-sm">
 							{#each item.specificBenefits as spec}
 								<li class="flex items-start gap-2 text-gray-800">
-									<Check size={16} class="mt-[2px] text-red-500" />
+									<Check size={16} class="mt-0.5 text-red-500" />
 									<span class="leading-relaxed">{spec}</span>
 								</li>
 							{/each}
 
 							{#each commonBenefits as benefit}
 								<li class="flex items-start gap-2 text-gray-500">
-									<Check size={14} class="mt-[2px] text-gray-400" />
+									<Check size={14} class="mt-0.5 text-gray-400" />
 									<span class="leading-relaxed">{benefit}</span>
 								</li>
 							{/each}

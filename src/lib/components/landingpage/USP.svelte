@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import { Button } from '$lib/components/ui/button';
 	import { Card } from '$lib/components/ui/card';
 	import { Check } from '@lucide/svelte';
@@ -35,7 +34,7 @@
 			</h3>
 
 			<p class="mb-8 leading-relaxed text-white/80">
-				COURSENAME dirancang untuk kamu yang serius ingin bisa Mandarin, tanpa ribet, tanpa buang
+				MandarinPals dirancang untuk kamu yang serius ingin bisa Mandarin, tanpa ribet, tanpa buang
 				waktu, dan tetap enjoyable.
 			</p>
 

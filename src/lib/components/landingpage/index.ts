@@ -1,0 +1,12 @@
+export { default as ClassMenu } from './ClassMenu.svelte';
+export { default as CTA } from './CTA.svelte';
+export { default as FAQ } from './FAQ.svelte';
+export { default as Footer } from './Footer.svelte';
+export { default as Herosection } from './Herosection.svelte';
+export { default as Mentors } from '../mentors/Mentors.svelte';
+export { default as Navbar } from './Navbar.svelte';
+export { default as Personalisation } from './Personalisation.svelte';
+export { default as Studysteps } from './Studysteps.svelte';
+export { default as Testimonials } from './Testimonials.svelte';
+export { default as UserPersonalisation } from './UserPersonalisation.svelte';
+export { default as USP } from './USP.svelte';
