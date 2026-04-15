@@ -6,16 +6,16 @@
 	<div class="mx-auto max-w-6xl">
 		<div class="mb-14 text-center">
 			<h1 class="text-3xl font-bold md:text-4xl">
-				Mentor <span class="text-red-500">COURSENAME</span>
+				Mentor <span class="text-red-500">MandarinPals</span>
 			</h1>
-			<p class="mt-2 text-gray-500">Mentor terbaik bisa kamu temukan di COURSENAME.</p>
+			<p class="mt-2 text-gray-500">Mentor terbaik bisa kamu temukan di MandarinPals.</p>
 		</div>
 
 		<div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
 			{#each mentors as m}
 				<a
 					href={`/mentors/${m.slug}`}
-					class="group mr-4 flex max-w-[420px] flex-none basis-[85%]
+					class="group mr-4 flex max-w-125 flex-none basis-[85%]
 		flex-col justify-between rounded-2xl border
 		border-gray-300
 		bg-neutral-50 p-6 transition-all duration-300

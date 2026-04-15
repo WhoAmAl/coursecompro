@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { MentorShowcase } from '$lib/components/mentors';
 	import { Avatar, AvatarFallback, AvatarImage } from '$lib/components/ui/avatar/index.js';
 	import { Badge } from '$lib/components/ui/badge';
 	import { Button } from '$lib/components/ui/button';
 	import { Card } from '$lib/components/ui/card';
-	import Mentorshowcase from '../../components/Mentorshowcase.svelte';
 
 	const { data } = $props();
 
@@ -111,7 +111,7 @@
 	</div>
 </section>
 <div class="flex flex-col items-center pb-10">
-	<Mentorshowcase />
+	<MentorShowcase />
 	<Button
 		onclick={() => goto('/mentors')}
 		class="mt-5 flex cursor-pointer gap-2 rounded-full bg-red-500 px-6 py-2 text-sm font-semibold text-neutral-100 shadow-md transition-all hover:-translate-y-1 hover:text-neutral-50"
