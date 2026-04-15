@@ -1,5 +1,5 @@
 <script>
-	import UserPersonalisation from '../components/UserPersonalisation.svelte';
+	import UserPersonalisation from '../../lib/components/landingpage/UserPersonalisation.svelte';
 </script>
 
 <section>

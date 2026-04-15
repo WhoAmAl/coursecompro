@@ -22,15 +22,16 @@
 		<div class="flex flex-col gap-3 sm:flex-row sm:justify-center">
 			<a
 				href="/"
-				class="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-red-600 to-rose-400 px-5 py-3 font-semibold text-white shadow transition hover:scale-[1.03]"
+				class="flex items-center justify-center gap-2 rounded-xl bg-linear-to-r from-red-600 to-rose-400 px-5 py-3 font-semibold text-white shadow transition hover:scale-[1.03]"
 			>
 				<Home class="h-4 w-4" />
 				Kembali ke Home
 			</a>
 
+			<!-- svelte-ignore event_directive_deprecated -->
 			<button
 				on:click={() => history.back()}
-				class="flex items-center justify-center gap-2 rounded-xl border px-5 py-3 font-semibold text-gray-600 transition hover:border-red-300 hover:text-red-500"
+				class="flex cursor-pointer items-center justify-center gap-2 rounded-xl border px-5 py-3 font-semibold text-gray-600 transition hover:border-red-300 hover:text-red-500"
 			>
 				<ArrowLeft class="h-4 w-4" />
 				Kembali
